@@ -1,0 +1,325 @@
+<html>
+<head>
+<title>TestNG:  Command line test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Command line test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>2/1/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Feb 06 17:47:16 CST 2019</td>
+</tr>
+<tr><td>Total time:</td><td>64 seconds (64155 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.saucelabs.example.TestSetup.tearDown()'><b>tearDown</b><br>Test class: com.saucelabs.example.TestSetup<br>Parameters: [TestResult name=AndroidAddFunctionDemo status=FAILURE method=TestSetup.AndroidAddFunctionDemo(java.lang.String, java.lang.String, java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.saucelabs.example.TestSetup@47d90b9e] output={null}]</td>
+<td><div><pre>javax.ws.rs.ProcessingException: javax/xml/bind/annotation/XmlElement
+	at org.glassfish.jersey.client.ClientRuntime.invoke(ClientRuntime.java:261)
+	at org.glassfish.jersey.client.JerseyInvocation$1.call(JerseyInvocation.java:684)
+	at org.glassfish.jersey.client.JerseyInvocation$1.call(JerseyInvocation.java:681)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:228)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:444)
+	at org.glassfish.jersey.client.JerseyInvocation.invoke(JerseyInvocation.java:681)
+	at org.glassfish.jersey.client.JerseyInvocation$Builder.method(JerseyInvocation.java:437)
+	at org.glassfish.jersey.client.JerseyInvocation$Builder.put(JerseyInvocation.java:326)
+	at com.saucelabs.example.util.ResultReporter.saveTestStatus(ResultReporter.java:25)
+	at com.saucelabs.example.TestSetup.tearDown(TestSetup.java:97)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.NoClassDefFoundError: javax/xml/bind/annotation/XmlElement
+	at com.fasterxml.jackson.module.jaxb.JaxbAnnotationIntrospector.&lt;init&gt;(JaxbAnnotationIntrospector.java:139)
+	at com.fasterxml.jackson.module.jaxb.JaxbAnnotationIntrospector.&lt;init&gt;(JaxbAnnotationIntrospector.java:126)
+	at com.fasterxml.jackson.module.jaxb.JaxbAnnotationIntrospector.&lt;init&gt;(JaxbAnnotationIntrospector.java:118)
+	at java.base/java.lang.Class.newInstance(Class.java:584)
+	at com.fasterxml.jackson.jaxrs.json.JsonMapperConfigurator._resolveIntrospector(JsonMapperConfigurator.java:111)
+	at com.fasterxml.jackson.jaxrs.json.JsonMapperConfigurator._resolveIntrospectors(JsonMapperConfigurator.java:84)
+	at com.fasterxml.jackson.jaxrs.cfg.MapperConfiguratorBase._setAnnotations(MapperConfiguratorBase.java:120)
+	at com.fasterxml.jackson.jaxrs.json.JsonMapperConfigurator.getDefaultMapper(JsonMapperConfigurator.java:45)
+	at com.fasterxml.jackson.jaxrs.base.ProviderBase.locateMapper(ProviderBase.java:925)
+	at com.fasterxml.jackson.jaxrs.base.ProviderBase._endpointForWriting(ProviderBase.java:686)
+	at com.fasterxml.jackson.jaxrs.base.ProviderBase.writeTo(ProviderBase.java:558)
+	at org.glassfish.jersey.message.internal.WriterInterceptorExecutor$TerminalWriterInterceptor.invokeWriteTo(WriterInterceptorExecutor.java:265)
+	at org.glassfish.jersey.message.internal.WriterInterceptorExecutor$TerminalWriterInterceptor.aroundWriteTo(WriterInterceptorExecutor.java:250)
+	at org.glassfish.jersey.message.internal.WriterInterceptorExecutor.proceed(WriterInterceptorExecutor.java:162)
+	at org.glassfish.jersey.message.internal.MessageBodyFactory.writeTo(MessageBodyFactory.java:1130)
+	at org.glassfish.jersey.client.ClientRequest.doWriteEntity(ClientRequest.java:517)
+	at org.glassfish.jersey.client.ClientRequest.writeEntity(ClientRequest.java:499)
+	at org.glassfish.jersey.client.internal.HttpUrlConnector._apply(HttpUrlConnector.java:393)
+	at org.glassfish.jersey.client.internal.HttpUrlConnector.apply(HttpUrlConnector.java:285)
+	at org.glassfish.jersey.client.ClientRuntime.invoke(ClientRuntime.java:252)
+	... 28 more
+Caused by: java.lang.ClassNotFoundException: javax.xml.bind.annotation.XmlElement
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:583)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	... 52 more
+... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace532433958", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace532433958'><pre>javax.ws.rs.ProcessingException: javax/xml/bind/annotation/XmlElement
+	at org.glassfish.jersey.client.ClientRuntime.invoke(ClientRuntime.java:261)
+	at org.glassfish.jersey.client.JerseyInvocation$1.call(JerseyInvocation.java:684)
+	at org.glassfish.jersey.client.JerseyInvocation$1.call(JerseyInvocation.java:681)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:228)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:444)
+	at org.glassfish.jersey.client.JerseyInvocation.invoke(JerseyInvocation.java:681)
+	at org.glassfish.jersey.client.JerseyInvocation$Builder.method(JerseyInvocation.java:437)
+	at org.glassfish.jersey.client.JerseyInvocation$Builder.put(JerseyInvocation.java:326)
+	at com.saucelabs.example.util.ResultReporter.saveTestStatus(ResultReporter.java:25)
+	at com.saucelabs.example.TestSetup.tearDown(TestSetup.java:97)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:515)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:217)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:712)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:75)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:14)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.NoClassDefFoundError: javax/xml/bind/annotation/XmlElement
+	at com.fasterxml.jackson.module.jaxb.JaxbAnnotationIntrospector.&lt;init&gt;(JaxbAnnotationIntrospector.java:139)
+	at com.fasterxml.jackson.module.jaxb.JaxbAnnotationIntrospector.&lt;init&gt;(JaxbAnnotationIntrospector.java:126)
+	at com.fasterxml.jackson.module.jaxb.JaxbAnnotationIntrospector.&lt;init&gt;(JaxbAnnotationIntrospector.java:118)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at java.base/java.lang.Class.newInstance(Class.java:584)
+	at com.fasterxml.jackson.jaxrs.json.JsonMapperConfigurator._resolveIntrospector(JsonMapperConfigurator.java:111)
+	at com.fasterxml.jackson.jaxrs.json.JsonMapperConfigurator._resolveIntrospectors(JsonMapperConfigurator.java:84)
+	at com.fasterxml.jackson.jaxrs.cfg.MapperConfiguratorBase._setAnnotations(MapperConfiguratorBase.java:120)
+	at com.fasterxml.jackson.jaxrs.json.JsonMapperConfigurator.getDefaultMapper(JsonMapperConfigurator.java:45)
+	at com.fasterxml.jackson.jaxrs.base.ProviderBase.locateMapper(ProviderBase.java:925)
+	at com.fasterxml.jackson.jaxrs.base.ProviderBase._endpointForWriting(ProviderBase.java:686)
+	at com.fasterxml.jackson.jaxrs.base.ProviderBase.writeTo(ProviderBase.java:558)
+	at org.glassfish.jersey.message.internal.WriterInterceptorExecutor$TerminalWriterInterceptor.invokeWriteTo(WriterInterceptorExecutor.java:265)
+	at org.glassfish.jersey.message.internal.WriterInterceptorExecutor$TerminalWriterInterceptor.aroundWriteTo(WriterInterceptorExecutor.java:250)
+	at org.glassfish.jersey.message.internal.WriterInterceptorExecutor.proceed(WriterInterceptorExecutor.java:162)
+	at org.glassfish.jersey.message.internal.MessageBodyFactory.writeTo(MessageBodyFactory.java:1130)
+	at org.glassfish.jersey.client.ClientRequest.doWriteEntity(ClientRequest.java:517)
+	at org.glassfish.jersey.client.ClientRequest.writeEntity(ClientRequest.java:499)
+	at org.glassfish.jersey.client.internal.HttpUrlConnector._apply(HttpUrlConnector.java:393)
+	at org.glassfish.jersey.client.internal.HttpUrlConnector.apply(HttpUrlConnector.java:285)
+	at org.glassfish.jersey.client.ClientRuntime.invoke(ClientRuntime.java:252)
+	... 28 more
+Caused by: java.lang.ClassNotFoundException: javax.xml.bind.annotation.XmlElement
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:583)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	... 52 more
+</pre></div></td>
+<td>0</td>
+<td>com.saucelabs.example.TestSetup@47d90b9e</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.saucelabs.example.TestSetup.tearDown()'><b>tearDown</b><br>Test class: com.saucelabs.example.TestSetup</td>
+<td></td>
+<td>0</td>
+<td>com.saucelabs.example.TestSetup@47d90b9e</td></tr>
+<tr>
+<td title='com.saucelabs.example.TestSetup.tearDown()'><b>tearDown</b><br>Test class: com.saucelabs.example.TestSetup</td>
+<td></td>
+<td>0</td>
+<td>com.saucelabs.example.TestSetup@47d90b9e</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.saucelabs.example.TestSetup.AndroidAddFunctionDemo()'><b>AndroidAddFunctionDemo</b><br>Test class: com.saucelabs.example.TestSetup<br>Parameters: Android, Google Pixel, 9, public void com.saucelabs.example.TestSetup.AndroidAddFunctionDemo(java.lang.String,java.lang.String,java.lang.String,java.lang.reflect.Method) throws java.net.MalformedURLException</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 1.06 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;SL-1155.attlocal.net&apos;, ip: &apos;192.168.1.104&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14&apos;, java.version: &apos;11.0.2&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{suppressKillServer=true, appPackage=net.ludeke.calculator, testobject_user_id=se-team, testobject_platform_name=Android, testobject_test_report_url=https://app.testobject.com/#/se-team/calculator/appium/executions/2249, testobject_device_name=Google Pixel, testobject_device_session_id=56b81242-746f-4624-968c-2055d5187df6, deviceName=FA6950303818, platform=LINUX, deviceUDID=FA6950303818, testobject_test_report_id=2249, desired={suppressKillServer=true, appPackage=net.ludeke.calculator, testobject_platform_name=Android, testobject_test_name=AndroidAddFunctionDemo, testobject_device=Google Pixel, adbPort=15010, deviceName=Google_Pixel_8_real_us, appActivity=com.android.calculator2.Calculator, chromedriverChromeMappingFile=/root/.testobject_devices/work/chromedriver-mapping.json, name=AndroidAddFunctionDemo, testobject_api_key=D7348099E5FC44458E807282AF87FDB4, platformName=Android, chromedriverExecutableDir=/root/.testobject_devices/work/chromedrivers, systemPort=8210}, platformVersion=9, webStorageEnabled=false, takesScreenshot=true, javascriptEnabled=true, platformName=Android, deviceManufacturer=Google, chromedriverExecutableDir=/root/.testobject_devices/work/chromedrivers, systemPort=8210, deviceScreenSize=1080x1920, deviceContextId=a2696bd2-8d90-42a9-9daf-755832335005, networkConnectionEnabled=true, testobject_test_name=AndroidAddFunctionDemo, warnings={}, testobject_device=Google_Pixel_8_real_us, databaseEnabled=false, adbPort=15010, testobject_project_id=calculator, appActivity=com.android.calculator2.Calculator, testobject_test_report_api_url=https://app.testobject.com/api/rest/v2/reports/2249, chromedriverChromeMappingFile=/root/.testobject_devices/work/chromedriver-mapping.json, locationContextEnabled=false, name=AndroidAddFunctionDemo, testobject_api_key=D7348099E5FC44458E807282AF87FDB4, deviceModel=Pixel, testobject_test_live_view_url=https://app.testobject.com/#/se-team/calculator/appium/view/2249?dc=US}]
+Session ID: eaca7c0c-14a5-45db-b36b-cdf8b11225ea
+*** Element info: {Using=id, value=net.ludeke.calculator:id/digit2}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:56)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:64)
+	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at com.saucelabs.example.TestSetup.AndroidAddFunctionDemo(TestSetup.java:73)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+... Removed 13 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1672050155", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1672050155'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 1.06 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;SL-1155.attlocal.net&apos;, ip: &apos;192.168.1.104&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14&apos;, java.version: &apos;11.0.2&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{suppressKillServer=true, appPackage=net.ludeke.calculator, testobject_user_id=se-team, testobject_platform_name=Android, testobject_test_report_url=https://app.testobject.com/#/se-team/calculator/appium/executions/2249, testobject_device_name=Google Pixel, testobject_device_session_id=56b81242-746f-4624-968c-2055d5187df6, deviceName=FA6950303818, platform=LINUX, deviceUDID=FA6950303818, testobject_test_report_id=2249, desired={suppressKillServer=true, appPackage=net.ludeke.calculator, testobject_platform_name=Android, testobject_test_name=AndroidAddFunctionDemo, testobject_device=Google Pixel, adbPort=15010, deviceName=Google_Pixel_8_real_us, appActivity=com.android.calculator2.Calculator, chromedriverChromeMappingFile=/root/.testobject_devices/work/chromedriver-mapping.json, name=AndroidAddFunctionDemo, testobject_api_key=D7348099E5FC44458E807282AF87FDB4, platformName=Android, chromedriverExecutableDir=/root/.testobject_devices/work/chromedrivers, systemPort=8210}, platformVersion=9, webStorageEnabled=false, takesScreenshot=true, javascriptEnabled=true, platformName=Android, deviceManufacturer=Google, chromedriverExecutableDir=/root/.testobject_devices/work/chromedrivers, systemPort=8210, deviceScreenSize=1080x1920, deviceContextId=a2696bd2-8d90-42a9-9daf-755832335005, networkConnectionEnabled=true, testobject_test_name=AndroidAddFunctionDemo, warnings={}, testobject_device=Google_Pixel_8_real_us, databaseEnabled=false, adbPort=15010, testobject_project_id=calculator, appActivity=com.android.calculator2.Calculator, testobject_test_report_api_url=https://app.testobject.com/api/rest/v2/reports/2249, chromedriverChromeMappingFile=/root/.testobject_devices/work/chromedriver-mapping.json, locationContextEnabled=false, name=AndroidAddFunctionDemo, testobject_api_key=D7348099E5FC44458E807282AF87FDB4, deviceModel=Pixel, testobject_test_live_view_url=https://app.testobject.com/#/se-team/calculator/appium/view/2249?dc=US}]
+Session ID: eaca7c0c-14a5-45db-b36b-cdf8b11225ea
+*** Element info: {Using=id, value=net.ludeke.calculator:id/digit2}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:56)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:64)
+	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at com.saucelabs.example.TestSetup.AndroidAddFunctionDemo(TestSetup.java:73)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:75)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:14)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+</pre></div></td>
+<td>42</td>
+<td>com.saucelabs.example.TestSetup@47d90b9e</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.saucelabs.example.TestSetup.AndroidAddFunctionDemo()'><b>AndroidAddFunctionDemo</b><br>Test class: com.saucelabs.example.TestSetup<br>Parameters: Android, HTC 10, 8, public void com.saucelabs.example.TestSetup.AndroidAddFunctionDemo(java.lang.String,java.lang.String,java.lang.String,java.lang.reflect.Method) throws java.net.MalformedURLException</td>
+<td></td>
+<td>64</td>
+<td>com.saucelabs.example.TestSetup@47d90b9e</td></tr>
+<tr>
+<td title='com.saucelabs.example.TestSetup.AndroidAddFunctionDemo()'><b>AndroidAddFunctionDemo</b><br>Test class: com.saucelabs.example.TestSetup<br>Parameters: Android, Samsung Galaxy S6, 6, public void com.saucelabs.example.TestSetup.AndroidAddFunctionDemo(java.lang.String,java.lang.String,java.lang.String,java.lang.reflect.Method) throws java.net.MalformedURLException</td>
+<td></td>
+<td>64</td>
+<td>com.saucelabs.example.TestSetup@47d90b9e</td></tr>
+</table><p>
+</body>
+</html>
