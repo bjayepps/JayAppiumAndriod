@@ -1,13 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
+<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-02-06T23:47:16Z" name="com.saucelabs.example.TestSetup" finished-at="2019-02-06T23:48:20Z" duration-ms="64155">
+  <suite started-at="2019-06-14T18:59:39Z" name="Command line suite" finished-at="2019-06-14T19:00:45Z" duration-ms="66188">
     <groups>
     </groups>
-    <test started-at="2019-02-06T23:47:16Z" name="Command line test" finished-at="2019-02-06T23:48:20Z" duration-ms="64155">
+    <test started-at="2019-06-14T18:59:39Z" name="Command line test" finished-at="2019-06-14T19:00:45Z" duration-ms="66188">
       <class name="com.saucelabs.example.TestSetup">
-        <test-method signature="AndroidAddFunctionDemo(java.lang.String, java.lang.String, java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.saucelabs.example.TestSetup@47d90b9e]" started-at="2019-02-06T17:47:16Z" name="AndroidAddFunctionDemo" data-provider="devices" finished-at="2019-02-06T17:47:58Z" duration-ms="42409" status="FAIL">
+        <test-method signature="IanFAndroidppiumDemo(java.lang.String, java.lang.String, java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.saucelabs.example.TestSetup@ef9296d]" started-at="2019-06-14T13:59:39Z" name="IanFAndroidppiumDemo" data-provider="devices" finished-at="2019-06-14T14:00:45Z" duration-ms="66163" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Android]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Samsung Galaxy S6]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[6]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[public void com.saucelabs.example.TestSetup.IanFAndroidppiumDemo(java.lang.String,java.lang.String,java.lang.String,java.lang.reflect.Method) throws java.net.MalformedURLException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- IanFAndroidppiumDemo -->
+        <test-method signature="IanFAndroidppiumDemo(java.lang.String, java.lang.String, java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.saucelabs.example.TestSetup@ef9296d]" started-at="2019-06-14T13:59:39Z" name="IanFAndroidppiumDemo" data-provider="devices" finished-at="2019-06-14T14:00:19Z" duration-ms="40032" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -26,31 +52,31 @@
             </param>
             <param index="3">
               <value>
-                <![CDATA[public void com.saucelabs.example.TestSetup.AndroidAddFunctionDemo(java.lang.String,java.lang.String,java.lang.String,java.lang.reflect.Method) throws java.net.MalformedURLException]]>
+                <![CDATA[public void com.saucelabs.example.TestSetup.IanFAndroidppiumDemo(java.lang.String,java.lang.String,java.lang.String,java.lang.reflect.Method) throws java.net.MalformedURLException]]>
               </value>
             </param>
           </params>
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 1.06 seconds
+Command duration or timeout: 1.19 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
-System info: host: 'SL-1155.attlocal.net', ip: '192.168.1.104', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14', java.version: '11.0.2'
+System info: host: 'SL-1155.attlocal.net', ip: '192.168.1.104', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.3', java.version: '11.0.2'
 Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{suppressKillServer=true, appPackage=net.ludeke.calculator, testobject_user_id=se-team, testobject_platform_name=Android, testobject_test_report_url=https://app.testobject.com/#/se-team/calculator/appium/executions/2249, testobject_device_name=Google Pixel, testobject_device_session_id=56b81242-746f-4624-968c-2055d5187df6, deviceName=FA6950303818, platform=LINUX, deviceUDID=FA6950303818, testobject_test_report_id=2249, desired={suppressKillServer=true, appPackage=net.ludeke.calculator, testobject_platform_name=Android, testobject_test_name=AndroidAddFunctionDemo, testobject_device=Google Pixel, adbPort=15010, deviceName=Google_Pixel_8_real_us, appActivity=com.android.calculator2.Calculator, chromedriverChromeMappingFile=/root/.testobject_devices/work/chromedriver-mapping.json, name=AndroidAddFunctionDemo, testobject_api_key=D7348099E5FC44458E807282AF87FDB4, platformName=Android, chromedriverExecutableDir=/root/.testobject_devices/work/chromedrivers, systemPort=8210}, platformVersion=9, webStorageEnabled=false, takesScreenshot=true, javascriptEnabled=true, platformName=Android, deviceManufacturer=Google, chromedriverExecutableDir=/root/.testobject_devices/work/chromedrivers, systemPort=8210, deviceScreenSize=1080x1920, deviceContextId=a2696bd2-8d90-42a9-9daf-755832335005, networkConnectionEnabled=true, testobject_test_name=AndroidAddFunctionDemo, warnings={}, testobject_device=Google_Pixel_8_real_us, databaseEnabled=false, adbPort=15010, testobject_project_id=calculator, appActivity=com.android.calculator2.Calculator, testobject_test_report_api_url=https://app.testobject.com/api/rest/v2/reports/2249, chromedriverChromeMappingFile=/root/.testobject_devices/work/chromedriver-mapping.json, locationContextEnabled=false, name=AndroidAddFunctionDemo, testobject_api_key=D7348099E5FC44458E807282AF87FDB4, deviceModel=Pixel, testobject_test_live_view_url=https://app.testobject.com/#/se-team/calculator/appium/view/2249?dc=US}]
-Session ID: eaca7c0c-14a5-45db-b36b-cdf8b11225ea
+Capabilities [{suppressKillServer=true, appPackage=net.ludeke.calculator, testobject_user_id=se-team, testobject_platform_name=Android, testobject_test_report_url=https://app.testobject.com/#/se-team/calculator/appium/executions/3091, testobject_device_name=Google Pixel, testobject_device_session_id=0d422337-e0e5-4f44-832d-9de74ed43798, deviceName=127.0.0.1:16005, platform=LINUX, deviceUDID=127.0.0.1:16005, testobject_test_report_id=3091, desired={suppressKillServer=true, appPackage=net.ludeke.calculator, testobject_platform_name=Android, testobject_test_name=IanFAndroidppiumDemo, testobject_device=Google Pixel, adbPort=15012, deviceName=Google_Pixel_8_real_us, appActivity=com.android.calculator2.Calculator, chromedriverChromeMappingFile=/root/.testobject_devices/work/chromedriver-mapping.json, name=IanFAndroidppiumDemo, recordDeviceVitals=true, testobject_api_key=D7348099E5FC44458E807282AF87FDB4, platformName=Android, chromedriverExecutableDir=/root/.testobject_devices/work/chromedrivers, systemPort=8212}, platformVersion=9, webStorageEnabled=false, takesScreenshot=true, javascriptEnabled=true, platformName=Android, deviceManufacturer=Google, chromedriverExecutableDir=/root/.testobject_devices/work/chromedrivers, systemPort=8212, deviceScreenSize=1080x1920, deviceContextId=eeaecfc0-2ece-46a9-9e33-fd88118f972b, networkConnectionEnabled=true, testobject_test_name=IanFAndroidppiumDemo, warnings={}, testobject_device=Google_Pixel_8_real_us, databaseEnabled=false, adbPort=15012, testobject_project_id=calculator, appActivity=com.android.calculator2.Calculator, testobject_test_report_api_url=https://app.testobject.com/api/rest/v2/reports/3091, chromedriverChromeMappingFile=/root/.testobject_devices/work/chromedriver-mapping.json, locationContextEnabled=false, name=IanFAndroidppiumDemo, recordDeviceVitals=true, testobject_api_key=D7348099E5FC44458E807282AF87FDB4, deviceModel=Pixel, testobject_test_live_view_url=https://app.testobject.com/#/se-team/calculator/appium/view/3091?dc=US}]
+Session ID: 82da312d-0125-4acc-84cd-27f03ca579f4
 *** Element info: {Using=id, value=net.ludeke.calculator:id/digit2}]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 1.06 seconds
+Command duration or timeout: 1.19 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
-System info: host: 'SL-1155.attlocal.net', ip: '192.168.1.104', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14', java.version: '11.0.2'
+System info: host: 'SL-1155.attlocal.net', ip: '192.168.1.104', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.3', java.version: '11.0.2'
 Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{suppressKillServer=true, appPackage=net.ludeke.calculator, testobject_user_id=se-team, testobject_platform_name=Android, testobject_test_report_url=https://app.testobject.com/#/se-team/calculator/appium/executions/2249, testobject_device_name=Google Pixel, testobject_device_session_id=56b81242-746f-4624-968c-2055d5187df6, deviceName=FA6950303818, platform=LINUX, deviceUDID=FA6950303818, testobject_test_report_id=2249, desired={suppressKillServer=true, appPackage=net.ludeke.calculator, testobject_platform_name=Android, testobject_test_name=AndroidAddFunctionDemo, testobject_device=Google Pixel, adbPort=15010, deviceName=Google_Pixel_8_real_us, appActivity=com.android.calculator2.Calculator, chromedriverChromeMappingFile=/root/.testobject_devices/work/chromedriver-mapping.json, name=AndroidAddFunctionDemo, testobject_api_key=D7348099E5FC44458E807282AF87FDB4, platformName=Android, chromedriverExecutableDir=/root/.testobject_devices/work/chromedrivers, systemPort=8210}, platformVersion=9, webStorageEnabled=false, takesScreenshot=true, javascriptEnabled=true, platformName=Android, deviceManufacturer=Google, chromedriverExecutableDir=/root/.testobject_devices/work/chromedrivers, systemPort=8210, deviceScreenSize=1080x1920, deviceContextId=a2696bd2-8d90-42a9-9daf-755832335005, networkConnectionEnabled=true, testobject_test_name=AndroidAddFunctionDemo, warnings={}, testobject_device=Google_Pixel_8_real_us, databaseEnabled=false, adbPort=15010, testobject_project_id=calculator, appActivity=com.android.calculator2.Calculator, testobject_test_report_api_url=https://app.testobject.com/api/rest/v2/reports/2249, chromedriverChromeMappingFile=/root/.testobject_devices/work/chromedriver-mapping.json, locationContextEnabled=false, name=AndroidAddFunctionDemo, testobject_api_key=D7348099E5FC44458E807282AF87FDB4, deviceModel=Pixel, testobject_test_live_view_url=https://app.testobject.com/#/se-team/calculator/appium/view/2249?dc=US}]
-Session ID: eaca7c0c-14a5-45db-b36b-cdf8b11225ea
+Capabilities [{suppressKillServer=true, appPackage=net.ludeke.calculator, testobject_user_id=se-team, testobject_platform_name=Android, testobject_test_report_url=https://app.testobject.com/#/se-team/calculator/appium/executions/3091, testobject_device_name=Google Pixel, testobject_device_session_id=0d422337-e0e5-4f44-832d-9de74ed43798, deviceName=127.0.0.1:16005, platform=LINUX, deviceUDID=127.0.0.1:16005, testobject_test_report_id=3091, desired={suppressKillServer=true, appPackage=net.ludeke.calculator, testobject_platform_name=Android, testobject_test_name=IanFAndroidppiumDemo, testobject_device=Google Pixel, adbPort=15012, deviceName=Google_Pixel_8_real_us, appActivity=com.android.calculator2.Calculator, chromedriverChromeMappingFile=/root/.testobject_devices/work/chromedriver-mapping.json, name=IanFAndroidppiumDemo, recordDeviceVitals=true, testobject_api_key=D7348099E5FC44458E807282AF87FDB4, platformName=Android, chromedriverExecutableDir=/root/.testobject_devices/work/chromedrivers, systemPort=8212}, platformVersion=9, webStorageEnabled=false, takesScreenshot=true, javascriptEnabled=true, platformName=Android, deviceManufacturer=Google, chromedriverExecutableDir=/root/.testobject_devices/work/chromedrivers, systemPort=8212, deviceScreenSize=1080x1920, deviceContextId=eeaecfc0-2ece-46a9-9e33-fd88118f972b, networkConnectionEnabled=true, testobject_test_name=IanFAndroidppiumDemo, warnings={}, testobject_device=Google_Pixel_8_real_us, databaseEnabled=false, adbPort=15012, testobject_project_id=calculator, appActivity=com.android.calculator2.Calculator, testobject_test_report_api_url=https://app.testobject.com/api/rest/v2/reports/3091, chromedriverChromeMappingFile=/root/.testobject_devices/work/chromedriver-mapping.json, locationContextEnabled=false, name=IanFAndroidppiumDemo, recordDeviceVitals=true, testobject_api_key=D7348099E5FC44458E807282AF87FDB4, deviceModel=Pixel, testobject_test_live_view_url=https://app.testobject.com/#/se-team/calculator/appium/view/3091?dc=US}]
+Session ID: 82da312d-0125-4acc-84cd-27f03ca579f4
 *** Element info: {Using=id, value=net.ludeke.calculator:id/digit2}
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -75,7 +101,7 @@ Session ID: eaca7c0c-14a5-45db-b36b-cdf8b11225ea
 	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
 	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
 	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at com.saucelabs.example.TestSetup.AndroidAddFunctionDemo(TestSetup.java:73)
+	at com.saucelabs.example.TestSetup.IanFAndroidppiumDemo(TestSetup.java:78)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -96,64 +122,12 @@ Session ID: eaca7c0c-14a5-45db-b36b-cdf8b11225ea
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- AndroidAddFunctionDemo -->
-        <test-method signature="AndroidAddFunctionDemo(java.lang.String, java.lang.String, java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.saucelabs.example.TestSetup@47d90b9e]" started-at="2019-02-06T17:47:16Z" name="AndroidAddFunctionDemo" data-provider="devices" finished-at="2019-02-06T17:48:20Z" duration-ms="64129" status="PASS">
+        </test-method> <!-- IanFAndroidppiumDemo -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.saucelabs.example.TestSetup@ef9296d]" started-at="2019-06-14T14:00:19Z" name="tearDown" finished-at="2019-06-14T14:00:19Z" duration-ms="0" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Android]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[HTC 10]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[8]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[public void com.saucelabs.example.TestSetup.AndroidAddFunctionDemo(java.lang.String,java.lang.String,java.lang.String,java.lang.reflect.Method) throws java.net.MalformedURLException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AndroidAddFunctionDemo -->
-        <test-method signature="AndroidAddFunctionDemo(java.lang.String, java.lang.String, java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.saucelabs.example.TestSetup@47d90b9e]" started-at="2019-02-06T17:47:16Z" name="AndroidAddFunctionDemo" data-provider="devices" finished-at="2019-02-06T17:48:20Z" duration-ms="64129" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Android]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Samsung Galaxy S6]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[6]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[public void com.saucelabs.example.TestSetup.AndroidAddFunctionDemo(java.lang.String,java.lang.String,java.lang.String,java.lang.reflect.Method) throws java.net.MalformedURLException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AndroidAddFunctionDemo -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.saucelabs.example.TestSetup@47d90b9e]" started-at="2019-02-06T17:47:58Z" name="tearDown" finished-at="2019-02-06T17:47:58Z" duration-ms="0" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=AndroidAddFunctionDemo status=FAILURE method=TestSetup.AndroidAddFunctionDemo(java.lang.String, java.lang.String, java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.saucelabs.example.TestSetup@47d90b9e] output={null}]]]>
+                <![CDATA[[TestResult name=IanFAndroidppiumDemo status=FAILURE method=TestSetup.IanFAndroidppiumDemo(java.lang.String, java.lang.String, java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.saucelabs.example.TestSetup@ef9296d] output={null}]]]>
               </value>
             </param>
           </params>
@@ -174,7 +148,7 @@ Session ID: eaca7c0c-14a5-45db-b36b-cdf8b11225ea
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.method(JerseyInvocation.java:437)
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.put(JerseyInvocation.java:326)
 	at com.saucelabs.example.util.ResultReporter.saveTestStatus(ResultReporter.java:25)
-	at com.saucelabs.example.TestSetup.tearDown(TestSetup.java:97)
+	at com.saucelabs.example.TestSetup.tearDown(TestSetup.java:117)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -229,15 +203,11 @@ Caused by: java.lang.ClassNotFoundException: javax.xml.bind.annotation.XmlElemen
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.saucelabs.example.TestSetup@47d90b9e]" started-at="2019-02-06T17:48:20Z" name="tearDown" finished-at="2019-02-06T17:48:20Z" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.saucelabs.example.TestSetup@47d90b9e]" started-at="2019-02-06T17:48:20Z" name="tearDown" finished-at="2019-02-06T17:48:20Z" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.saucelabs.example.TestSetup@ef9296d]" started-at="2019-06-14T14:00:45Z" name="tearDown" finished-at="2019-06-14T14:00:45Z" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.saucelabs.example.TestSetup -->
     </test> <!-- Command line test -->
-  </suite> <!-- com.saucelabs.example.TestSetup -->
+  </suite> <!-- Command line suite -->
 </testng-results>

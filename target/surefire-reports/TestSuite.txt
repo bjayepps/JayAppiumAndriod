@@ -1,16 +1,16 @@
 -------------------------------------------------------------------------------
-Test set: com.saucelabs.example.TestSetup
+Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 2, Errors: 0, Skipped: 2, Time elapsed: 64.385 sec <<< FAILURE!
-AndroidAddFunctionDemo(com.saucelabs.example.TestSetup)  Time elapsed: 42.482 sec  <<< FAILURE!
+Tests run: 4, Failures: 2, Errors: 0, Skipped: 1, Time elapsed: 66.42 sec <<< FAILURE!
+IanFAndroidppiumDemo(com.saucelabs.example.TestSetup)  Time elapsed: 40.048 sec  <<< FAILURE!
 org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 1.06 seconds
+Command duration or timeout: 1.19 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
-System info: host: 'SL-1155.attlocal.net', ip: '192.168.1.104', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14', java.version: '11.0.2'
+System info: host: 'SL-1155.attlocal.net', ip: '192.168.1.104', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.3', java.version: '11.0.2'
 Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{suppressKillServer=true, appPackage=net.ludeke.calculator, testobject_user_id=se-team, testobject_platform_name=Android, testobject_test_report_url=https://app.testobject.com/#/se-team/calculator/appium/executions/2249, testobject_device_name=Google Pixel, testobject_device_session_id=56b81242-746f-4624-968c-2055d5187df6, deviceName=FA6950303818, platform=LINUX, deviceUDID=FA6950303818, testobject_test_report_id=2249, desired={suppressKillServer=true, appPackage=net.ludeke.calculator, testobject_platform_name=Android, testobject_test_name=AndroidAddFunctionDemo, testobject_device=Google Pixel, adbPort=15010, deviceName=Google_Pixel_8_real_us, appActivity=com.android.calculator2.Calculator, chromedriverChromeMappingFile=/root/.testobject_devices/work/chromedriver-mapping.json, name=AndroidAddFunctionDemo, testobject_api_key=D7348099E5FC44458E807282AF87FDB4, platformName=Android, chromedriverExecutableDir=/root/.testobject_devices/work/chromedrivers, systemPort=8210}, platformVersion=9, webStorageEnabled=false, takesScreenshot=true, javascriptEnabled=true, platformName=Android, deviceManufacturer=Google, chromedriverExecutableDir=/root/.testobject_devices/work/chromedrivers, systemPort=8210, deviceScreenSize=1080x1920, deviceContextId=a2696bd2-8d90-42a9-9daf-755832335005, networkConnectionEnabled=true, testobject_test_name=AndroidAddFunctionDemo, warnings={}, testobject_device=Google_Pixel_8_real_us, databaseEnabled=false, adbPort=15010, testobject_project_id=calculator, appActivity=com.android.calculator2.Calculator, testobject_test_report_api_url=https://app.testobject.com/api/rest/v2/reports/2249, chromedriverChromeMappingFile=/root/.testobject_devices/work/chromedriver-mapping.json, locationContextEnabled=false, name=AndroidAddFunctionDemo, testobject_api_key=D7348099E5FC44458E807282AF87FDB4, deviceModel=Pixel, testobject_test_live_view_url=https://app.testobject.com/#/se-team/calculator/appium/view/2249?dc=US}]
-Session ID: eaca7c0c-14a5-45db-b36b-cdf8b11225ea
+Capabilities [{suppressKillServer=true, appPackage=net.ludeke.calculator, testobject_user_id=se-team, testobject_platform_name=Android, testobject_test_report_url=https://app.testobject.com/#/se-team/calculator/appium/executions/3091, testobject_device_name=Google Pixel, testobject_device_session_id=0d422337-e0e5-4f44-832d-9de74ed43798, deviceName=127.0.0.1:16005, platform=LINUX, deviceUDID=127.0.0.1:16005, testobject_test_report_id=3091, desired={suppressKillServer=true, appPackage=net.ludeke.calculator, testobject_platform_name=Android, testobject_test_name=IanFAndroidppiumDemo, testobject_device=Google Pixel, adbPort=15012, deviceName=Google_Pixel_8_real_us, appActivity=com.android.calculator2.Calculator, chromedriverChromeMappingFile=/root/.testobject_devices/work/chromedriver-mapping.json, name=IanFAndroidppiumDemo, recordDeviceVitals=true, testobject_api_key=D7348099E5FC44458E807282AF87FDB4, platformName=Android, chromedriverExecutableDir=/root/.testobject_devices/work/chromedrivers, systemPort=8212}, platformVersion=9, webStorageEnabled=false, takesScreenshot=true, javascriptEnabled=true, platformName=Android, deviceManufacturer=Google, chromedriverExecutableDir=/root/.testobject_devices/work/chromedrivers, systemPort=8212, deviceScreenSize=1080x1920, deviceContextId=eeaecfc0-2ece-46a9-9e33-fd88118f972b, networkConnectionEnabled=true, testobject_test_name=IanFAndroidppiumDemo, warnings={}, testobject_device=Google_Pixel_8_real_us, databaseEnabled=false, adbPort=15012, testobject_project_id=calculator, appActivity=com.android.calculator2.Calculator, testobject_test_report_api_url=https://app.testobject.com/api/rest/v2/reports/3091, chromedriverChromeMappingFile=/root/.testobject_devices/work/chromedriver-mapping.json, locationContextEnabled=false, name=IanFAndroidppiumDemo, recordDeviceVitals=true, testobject_api_key=D7348099E5FC44458E807282AF87FDB4, deviceModel=Pixel, testobject_test_live_view_url=https://app.testobject.com/#/se-team/calculator/appium/view/3091?dc=US}]
+Session ID: 82da312d-0125-4acc-84cd-27f03ca579f4
 *** Element info: {Using=id, value=net.ludeke.calculator:id/digit2}
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -35,9 +35,9 @@ Session ID: eaca7c0c-14a5-45db-b36b-cdf8b11225ea
 	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
 	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
 	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at com.saucelabs.example.TestSetup.AndroidAddFunctionDemo(TestSetup.java:73)
+	at com.saucelabs.example.TestSetup.IanFAndroidppiumDemo(TestSetup.java:78)
 
-tearDown(com.saucelabs.example.TestSetup)  Time elapsed: 43.888 sec  <<< FAILURE!
+tearDown(com.saucelabs.example.TestSetup)  Time elapsed: 41.297 sec  <<< FAILURE!
 javax.ws.rs.ProcessingException: javax/xml/bind/annotation/XmlElement
 	at org.glassfish.jersey.client.ClientRuntime.invoke(ClientRuntime.java:261)
 	at org.glassfish.jersey.client.JerseyInvocation$1.call(JerseyInvocation.java:684)
@@ -50,7 +50,7 @@ javax.ws.rs.ProcessingException: javax/xml/bind/annotation/XmlElement
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.method(JerseyInvocation.java:437)
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.put(JerseyInvocation.java:326)
 	at com.saucelabs.example.util.ResultReporter.saveTestStatus(ResultReporter.java:25)
-	at com.saucelabs.example.TestSetup.tearDown(TestSetup.java:97)
+	at com.saucelabs.example.TestSetup.tearDown(TestSetup.java:117)
 Caused by: java.lang.NoClassDefFoundError: javax/xml/bind/annotation/XmlElement
 	at com.fasterxml.jackson.module.jaxb.JaxbAnnotationIntrospector.<init>(JaxbAnnotationIntrospector.java:139)
 	at com.fasterxml.jackson.module.jaxb.JaxbAnnotationIntrospector.<init>(JaxbAnnotationIntrospector.java:126)

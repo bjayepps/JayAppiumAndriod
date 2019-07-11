@@ -1,2 +1,4 @@
+SauceLabsTest.class
 com/saucelabs/example/util/ResultReporter.class
+IanTest.class
 com/saucelabs/example/TestSetup.class

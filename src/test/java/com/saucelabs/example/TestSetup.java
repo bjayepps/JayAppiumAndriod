@@ -23,20 +23,21 @@ import java.lang.reflect.Method;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-/**
- * Created by grago on 28/02/2017.
- */
+
 public class TestSetup {
 
     private ResultReporter reporter;
-    private ThreadLocal<AndroidDriver> driver = new ThreadLocal<AndroidDriver>();
+    @SuppressWarnings("rawtypes")
+	private ThreadLocal<AndroidDriver> driver = new ThreadLocal<AndroidDriver>();
   
   /**
-   * DataProvider that explicitly sets the browser combinations to be used.
+   * DataProvider that explicitly sets the Device or Emulator/Simulator combinations to be used.
    *
    * @param testMethod
    * @return
    */
+    
+    
   @DataProvider(name = "devices", parallel = true)
   public static Object[][] sauceBrowserDataProvider(Method testMethod) {
       return new Object[][]{
@@ -44,8 +45,11 @@ public class TestSetup {
     		  //Verify that your account has access to the devices below
     	      
               new Object[]{"Android", "Samsung Galaxy S6", "6"},
-              new Object[]{"Android", "Google Pixel", "9"},
-              new Object[]{"Android", "HTC 10", "8"}
+              new Object[]{"Android", "Google Pixel", "9"}, // Samsung Galaxy S4 Emulator
+            //  new Object[]{"Android", "Samsung Galaxy S4 Emulator", "4.4"}, 
+           //   new Object[]{"Android", "HTC 10", "8"},
+           //   new Object[]{"Android", "Nexus 5", "6"}
+              
       };
   }
   
@@ -57,15 +61,16 @@ public class TestSetup {
       capabilities.setCapability("platformVersion", platformVersion);
       capabilities.setCapability("platformName", platformName);
       capabilities.setCapability("name",  methodName);
+      capabilities.setCapability("recordDeviceVitals", true);
 
-      driver.set(new AndroidDriver<WebElement>(
-              new URL(System.getenv("APPIUM_URL")), capabilities));
+      driver.set(new AndroidDriver<WebElement>(new URL(System.getenv("APPIUM_URL")), capabilities));
+      
       return driver.get();
   }
 
     /* A simple addition, it expects the correct result to appear in the result field. */
     @Test(dataProvider = "devices")
-    public void AndroidAddFunctionDemo(String platformName, String deviceName, String platformVersion, Method method) throws MalformedURLException {
+    public void IanFAndroidppiumDemo(String platformName, String deviceName, String platformVersion, Method method) throws MalformedURLException {
 
     	AndroidDriver driver = createDriver(platformName, platformVersion, deviceName, method.getName());
 
@@ -85,6 +90,19 @@ public class TestSetup {
 
         /* Check if within given time the correct result appears in the designated field. */
         (new WebDriverWait(driver, 30)).until(ExpectedConditions.textToBePresentInElement(resultField, "4"));
+        
+        /* Add two and two. */
+        buttonTwo.click();
+        buttonPlus.click();
+        buttonTwo.click();
+        buttonPlus.click();
+        buttonTwo.click();
+        driver.getScreenshotAs(OutputType.FILE);
+        buttonEquals.click();
+        driver.getScreenshotAs(OutputType.FILE);
+        
+        /* Check if within given time the correct result appears in the designated field. */
+        (new WebDriverWait(driver, 30)).until(ExpectedConditions.textToBePresentInElement(resultField, "6"));
     }
 
     @AfterMethod
@@ -93,6 +111,8 @@ public class TestSetup {
     	reporter = new ResultReporter();
         boolean success = result.isSuccess();
         String sessionId = driver.getSessionId().toString();
+        
+       
 
         reporter.saveTestStatus(sessionId, success);
         driver.quit();
