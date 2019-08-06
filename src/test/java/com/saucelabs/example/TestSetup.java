@@ -45,7 +45,7 @@ public class TestSetup {
     		  //Verify that your account has access to the devices below
     	      
               new Object[]{"Android", "Samsung Galaxy S6", ""},
-              new Object[]{"Android", "Google Pixel.*", ""}, // Samsung Galaxy S4 Emulator
+              new Object[]{"Android", "Samsung Galaxy S7.*", ""}, // Samsung Galaxy S4 Emulator
             //  new Object[]{"Android", "Samsung Galaxy S4 Emulator", "4.4"}, 
            //   new Object[]{"Android", "HTC 10", "8"},
            //   new Object[]{"Android", "Nexus 5", "6"}
