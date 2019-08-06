@@ -29,6 +29,7 @@ public class TestSetup {
     private ResultReporter reporter;
     @SuppressWarnings("rawtypes")
 	private ThreadLocal<AndroidDriver> driver = new ThreadLocal<AndroidDriver>();
+	 private ThreadLocal<AndroidDriver> sessionId = new ThreadLocal<AndroidDriver>();
   
   /**
    * DataProvider that explicitly sets the Device or Emulator/Simulator combinations to be used.
