@@ -44,8 +44,8 @@ public class TestSetup {
     	  
     		  //Verify that your account has access to the devices below
     	      
-              new Object[]{"Android", "Samsung Galaxy S6", "6"},
-              new Object[]{"Android", "Google Pixel", "9"}, // Samsung Galaxy S4 Emulator
+              new Object[]{"Android", "Samsung Galaxy S6", ""},
+              new Object[]{"Android", "Google Pixel.*", ""}, // Samsung Galaxy S4 Emulator
             //  new Object[]{"Android", "Samsung Galaxy S4 Emulator", "4.4"}, 
            //   new Object[]{"Android", "HTC 10", "8"},
            //   new Object[]{"Android", "Nexus 5", "6"}
@@ -62,6 +62,8 @@ public class TestSetup {
       capabilities.setCapability("platformName", platformName);
       capabilities.setCapability("name",  methodName);
       capabilities.setCapability("recordDeviceVitals", true);
+      capabilities.setCapability("cacheId", "testSLDemo");
+      capabilities.setCapability("noReset", true);
 
       driver.set(new AndroidDriver<WebElement>(new URL(System.getenv("APPIUM_URL")), capabilities));
       
