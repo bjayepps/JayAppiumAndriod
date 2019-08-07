@@ -41,7 +41,7 @@
     
 ### Running Tests
 ```
-$ mvn test
+$ mvn -X clean install compile test
 ```
 
 ### Advice/Troubleshooting
