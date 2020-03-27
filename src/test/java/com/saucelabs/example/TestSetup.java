@@ -73,7 +73,7 @@ public class TestSetup {
 
     /* A simple addition, it expects the correct result to appear in the result field. */
     @Test(dataProvider = "devices")
-    public void IanFAndroidppiumDemo(String platformName, String deviceName, String platformVersion, Method method) throws MalformedURLException {
+    public void JayAndroidppiumDemo(String platformName, String deviceName, String platformVersion, Method method) throws MalformedURLException {
 
     	AndroidDriver driver = createDriver(platformName, platformVersion, deviceName, method.getName());
 
